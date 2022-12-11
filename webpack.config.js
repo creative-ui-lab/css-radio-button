@@ -4,19 +4,19 @@ const path = require('path')
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
 
 // this will update the process.env with environment variables in .env file
-dotenv.config();
+dotenv.config()
 
 module.exports = function webpackConfig(env, args) {
   return {
     entry: {
-      main: path.join(__dirname, 'src/index.tsx')
+      main: path.join(__dirname, 'src/index.tsx'),
     },
     output: {
       filename: '[name].js',
       path: path.join(__dirname, 'public'),
     },
     resolve: {
-      extensions: ['.tsx', '.js'],
+      extensions: ['.tsx', '.js', '.ts'],
       plugins: [new TsconfigPathsPlugin()],
     },
     module: {
@@ -30,15 +30,15 @@ module.exports = function webpackConfig(env, args) {
         {
           test: /\.css$/i,
           use: [
-            "style-loader",
-            "css-loader",
+            'style-loader',
+            'css-loader',
             {
-              loader: "postcss-loader",
+              loader: 'postcss-loader',
               options: {
                 postcssOptions: {
                   plugins: [
                     [
-                      "postcss-preset-env",
+                      'postcss-preset-env',
                       {
                         // Options
                       },
@@ -47,7 +47,7 @@ module.exports = function webpackConfig(env, args) {
                 },
               },
             },
-          ]
+          ],
         },
       ],
     },
@@ -65,7 +65,7 @@ module.exports = function webpackConfig(env, args) {
     plugins: [
       new webpack.DefinePlugin({
         'process.env': JSON.stringify(process.env),
-      })
-    ]
+      }),
+    ],
   }
 }
