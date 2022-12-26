@@ -1,7 +1,7 @@
 import { Global } from '@emotion/react'
 import tw, { GlobalStyles as BaseStyles, css } from 'twin.macro'
 
-const GlobalStyleCss = process.env.NODE_ENV === 'production' ? css`` : css`
+const GlobalStyleCss = css`
   html {
     margin: 0;
   }
