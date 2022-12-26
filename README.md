@@ -1,24 +1,11 @@
-vite에서 twin.macro를 사용하기 위해서는 `babel-plugin-twin` `babel-plugin-macros`가 필요하다.
+<img width="578" alt="스크린샷 2022-12-11 오후 2 50 57" src="https://user-images.githubusercontent.com/42893446/206888574-d59309b5-51e8-4aad-a0fd-d4fc8d44f07f.png">
 
-`@emotion/styled` `@emtoion/react`를 사용하는데 위 babel 플러그인 두가지만 설정하면 `<div css="..." data-tw=""/>` 이런식으로 나오게된다. css속성은 `@emotion`의 기능이기 때문에
+## Feature
 
-typescript 설정에서 jsxImportSource를 `@emotion/react`로 설정해줘야한다.
+- [ ] https://github.com/imwebme/imweb-ui/tree/main/packages/design-system/radio 참고해서 radio 기능을 충분히 가져올 수 있도록 추가
 
-```json
-{
-  "compilerOptions": {
-    "jsxImportSource": "@emotion/react"
-```
+현재는 그냥 ui만 가져왔다.
 
-## 🤔
+## References
 
-### 많은 수의 endpoint를 가져야할떄
-
-- https://stackoverflow.com/questions/70522494/multiple-entry-points-in-vite
-
-
-
-## 참고자료
-
-- https://github.com/ben-rogerson/babel-plugin-twin/issues/9#issuecomment-1318545946
-- https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react
+https://codepen.io/triss90/pen/XNEdRe?editors=1100
