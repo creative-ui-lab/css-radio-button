@@ -4,7 +4,7 @@ import tsconfigPaths from 'vite-tsconfig-paths'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/twin.macro-vite/",
+  base: "/css-radio-button/",
   plugins: [
     react({
       babel: {
