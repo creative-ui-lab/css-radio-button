@@ -1,24 +1,33 @@
 {
   "compilerOptions": {
-    "module": "ESNext",
     "target": "ESNext",
-    "moduleResolution": "node",
-    "jsx": "preserve",
-    "baseUrl": "./src",
-    "noEmit": true,
-    "strict": true,
+    "useDefineForClassFields": true,
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ESNext"
+    ],
+    "allowJs": false,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "resolveJsonModule": true,
+    "esModuleInterop": false,
     "allowSyntheticDefaultImports": true,
-    "noUnusedParameters": true,
-    "noImplicitReturns": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
     "isolatedModules": true,
-    "esModuleInterop": true,
-    "jsxImportSource": "@emotion/react" // Add the css prop
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "baseUrl": "./src",
+    "jsxImportSource": "@emotion/react"
   },
   "include": [
-    "src",
-    "types"
+    "src"
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
   ]
 }
